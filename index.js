@@ -9,7 +9,7 @@ var pool = new Pool({
   connectionString : process.env.DATABASE_URL
 });
 
-pool.connect();
+// pool.connect();
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
