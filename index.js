@@ -33,8 +33,10 @@ app.get('/db', async (req, res) => {
   // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
 app.post('/insert', function(req, res){
   console.log(req.body);
-  // alert("values read into index.js");
-  var nameS = req.body.nameS;
+
+  console.log("update Student set " + data + " where name ='" + req.body.multi + "';");
+
+  var name = req.body.name;
   var weight = req.body.weight;
   var height = req.body.height;
   var hair = req.body.hair_color;
@@ -42,7 +44,7 @@ app.post('/insert', function(req, res){
   var major = req.body.major;
   var age = req.body.age;
 
-  console.log(req.body.nameS);
+  console.log(req.body.name);
   console.log(name);
   console.log(req.body.weight);
   console.log(weight);
