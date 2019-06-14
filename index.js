@@ -34,7 +34,7 @@ app.get('/db', async (req, res) => {
 app.post('/insert', function(req, res){
   console.log(req.body);
   // alert("values read into index.js");
-  var name = req.body.name;
+  var nameS = req.body.nameS;
   var weight = req.body.weight;
   var height = req.body.height;
   var hair = req.body.hair_color;
@@ -42,7 +42,7 @@ app.post('/insert', function(req, res){
   var major = req.body.major;
   var age = req.body.age;
 
-  console.log(req.body.name);
+  console.log(req.body.nameS);
   console.log(name);
   console.log(req.body.weight);
   console.log(weight);
