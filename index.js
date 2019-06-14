@@ -34,7 +34,7 @@ app.get('/db', async (req, res) => {
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
   console.log("hello test");
-  res.redirect("apple.com");
+  res.redirect("https://apple.com");
 
   var name = req.body.name;
   var weight = req.body.weight;
