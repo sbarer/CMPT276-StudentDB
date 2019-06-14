@@ -63,3 +63,10 @@
     color: white;
 }
 .disbut:hover {background-color: rgb(37, 103, 165);}
+
+input[type="text"] {
+    text-indent: 00px ;
+    text-align: right ;
+    width: auto;
+    border: 0
+  }
