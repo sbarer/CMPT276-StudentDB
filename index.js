@@ -24,13 +24,14 @@ express()
       const result = await client.query('SELECT * FROM student');
       const results = { 'results': (result) ? result.rows : null};
 
-      const insertQuery = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
-      // var values = [data.name, data.weight, data.height, data.hair_color, data.gpa, data.major, data.age];
-      app.post('/contact', function(req, res){
-        pool.query(insertQuery);
-      })
+      const insertQuery = 'INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ($1,$2,$3,$4,$5,$6,$7)';
+      const data = {text: req.body.text};
+      var values = [data.name, data.weight, data.height, data.hair_color, data.gpa, data.major, data.age];
+      app.post('/insert', function(req, res){
+        alert("values read into index.js");
+        pool.query(insertQuery, values);
+      });
       // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
-      // const data = {text: req.body.text};
 
       res.render('pages/db', results );
       client.release();
