@@ -36,6 +36,7 @@ function editRowNum(selectObject) {
     var isnum = checknum(value);
 
     if (isnum == false) {
+        alert("replacing value");
         selectObject.value = r.name;
     }
 }
