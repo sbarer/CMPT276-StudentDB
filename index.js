@@ -35,9 +35,10 @@ app.get('/db', async (req, res) => {
   // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
-  console.log("hello testing");
+  var str = "hello testing";
+  console.log(str);
   for (var i =0; i < 5; i++) {
-    console.log("hello test");
+    console.log(str);
   }
   // res.redirect("https://apple.com");
 
