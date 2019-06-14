@@ -34,7 +34,7 @@ app.get('/db', async (req, res) => {
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
 
-  console.log(" Student set " + req.body);
+  console.log("Req body = " + req.body);
 
   var name = req.body.name;
   var weight = req.body.weight;
