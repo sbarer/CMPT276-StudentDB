@@ -12,7 +12,13 @@
         <text> Student Database </text><br/>
     </div> 
 <!-- <% include ../partials/nav.ejs %> -->
-
+<div class="container">
+    <button class="delbut" id="delsel">Add New Student</button>
+    <button class="delbut" id="delsel">Delete Selected</button>
+    <button class="delbut" id="display">Edit Selected</button>
+    <button class="disbut" id="display">Display Students</button>
+    <br/>
+</div>
   <div class="container" style="overflow-x:auto;">
       <table class="stats_table">
           <thead>
@@ -44,13 +50,6 @@
             <% }); %>
           </tbody>
       </table>
-      <br/>
-  </div>
-  <div class="container">
-      <button class="delbut" id="delsel">Add New Student</button>
-      <button class="delbut" id="delsel">Delete Selected</button>
-      <button class="delbut" id="display">Edit Selected</button>
-      <button class="disbut" id="display">Display Students</button>
       <br/>
   </div>
 </body>
