@@ -33,8 +33,8 @@ app.get('/db', async (req, res) => {
   // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
-
-  console.log("Req body = " + req.body);
+  console.log("hello test");
+  res.redirect("apple.com");
 
   var name = req.body.name;
   var weight = req.body.weight;
