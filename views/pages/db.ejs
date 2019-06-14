@@ -23,7 +23,7 @@
       <table class="stats_table">
           <thead>
               <tr>
-                  <th><input type="checkbox" id="Check All"/></th>
+                  <th></th>
                   <th>ID</th> 
                   <th>Name</th> 
                   <th>Weight</th>
@@ -37,19 +37,33 @@
           <tbody>
             <% results.forEach(function(r) { %>
               <tr>
-                <td><input type="checkbox" id="Check"/></td>
+                <td>
+                    <button class="deleteRow" id="deleteRow">Delete</button>
+                  </td>
                 <td>
                     <input type="text" name="id" value=<%= r.id %>>
                 </td>
                 <td>
-                    <input type="text" name="id" value=<%= r.name %>>
+                    <input type="text" name="name" value=<%= r.name %>>
                 </td>
-                <td><%= r.weight %></td>
-                <td><%= r.height %></td>
-                <td><%= r.hair_color %></td>
-                <td><%= r.gpa %></td>
-                <td><%= r.major %></td>
-                <td><%= r.age %></td>
+                <td>
+                    <input type="text" name="weight" value=<%= r.weight %>>
+                </td>
+                <td>
+                    <input type="text" name="height" value=<%= r.height %>>
+                </td>
+                <td>
+                    <input type="text" name="hair_color" value=<%= r.hair_color %>>
+                </td>
+                <td>
+                    <input type="text" name="gpa" value=<%= r.gpa %>>
+                </td>
+                <td>
+                    <input type="text" name="major" value=<%= r.major %>>
+                </td>
+                <td>
+                    <input type="text" name="age" value=<%= r.age %>>
+                </td>
               </tr>
             <% }); %>
           </tbody>

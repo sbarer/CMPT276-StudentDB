@@ -20,3 +20,12 @@
 //         viewdata()
 //     })
 // })
+
+
+function deleteRow(selectObject) {
+
+}
+
+function newRow(selectObject) {
+
+}
