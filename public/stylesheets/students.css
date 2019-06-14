@@ -17,8 +17,8 @@
     border-radius: 4px ;
     margin: auto;
     text-align: center;
-    font-family:Helvetica Neue; 
-    font-size: 12px; 
+    font-family: Helvetica Neue; 
+    font-size: 14px; 
 }
 .stats_table tr:nth-child(odd){background-color: rgb(228, 242, 247);}
 .stats_table tr:hover {background-color: lightblue;}
@@ -27,8 +27,9 @@
   padding-bottom: 3px;
   background-color: rgb(102, 151, 207);
   color: white;
-  font-weight: lighter;
+  font-weight: bold;
   text-align: center;
+
 }
 .stats_table, th, td {
     border-radius: 3px ;
@@ -73,7 +74,7 @@ input[type="text"] {
     outline: none;
     background: transparent;
     font-family:Helvetica Neue; 
-    font-size: 12px;  
+    font-size: 14px;  
 
 }
 input[type="text1"] {
@@ -84,7 +85,7 @@ input[type="text1"] {
     outline: none;
     background: transparent;
     font-family:Helvetica Neue; 
-    font-size: 12px;  
+    font-size: 14px;  
 
 }
 
