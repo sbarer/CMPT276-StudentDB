@@ -16,6 +16,45 @@
         <li><%= r.id %> - <%= r.name %>  - <%= r.weight %>  - <%= r.height %> - <%= r.hair_color %> - <%= r.gpa %> - <%= r.major %> - <%= r.age %></li>
     <% }); %>
 </ul>
+<div class="container" style="overflow-x:auto;">
+    <table class="stats_table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="Check All"/></th>
+                <th>Name</th> 
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Hair Color</th>
+                <th>GPA</th>
+                <th>Major</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" id="Check"/></td>
+                <td>Bobby</td>
+                <td>150</td> 
+                <td>30</td>
+                <td>red</td>
+                <td>2.5</td>
+                <td>CS</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="Check"/></td>
+                <td>Steve</td>
+                <td>200</td> 
+                <td>30</td>
+                <td>blue</td>
+                <td>3.6</td>
+                <td>Math</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+</div>
 
 </div>
 
