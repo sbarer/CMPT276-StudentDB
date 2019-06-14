@@ -13,10 +13,10 @@
     </div> 
 <!-- <% include ../partials/nav.ejs %> -->
 <div class="container">
-    <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/addstudent.html';">Add New Student</button>
+    <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/addstudent';">Add New Student</button>
     <!-- <button class="delbut" id="delsel">Delete Selected</button> -->
     <!-- <button class="delbut" id="display">Edit Selected</button> -->
-    <button class="disbut" id="display" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/students.html';">Display Students</button>
+    <button class="disbut" id="display" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/students';">Display Students</button>
     <br/><br/>
 </div>
   <div class="container" style="overflow-x:auto;">
@@ -44,7 +44,7 @@
                     <%= r.id %>
                 </td>
                 <td>
-                    <input type="text" name="name" value="<%= r.name %>" onchange="editRow(this)">
+                    <input type="text" name="name" value="<%= r.name %>" onchange="newRow(this)">
                 </td>
                 <td>
                     <input type="text" name="weight" value="<%= r.weight %>" onchange="editRowNum(this)">
