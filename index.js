@@ -29,8 +29,7 @@ express()
       console.error(err);
       res.send("Error " + err);
     }
-  })
-  
+  });
   // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
   app.post('/insert', function(req, res){
     alert("values read into index.js");
