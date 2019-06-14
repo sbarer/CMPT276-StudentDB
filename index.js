@@ -34,6 +34,24 @@ app.get('/db', async (req, res) => {
 app.post('/insert', function(req, res){
   console.log(req.body);
   // alert("values read into index.js");
+  var name = req.body.name;
+  var weight = req.body.weight;
+  var height = req.body.height;
+  var hair = req.body.hair_color;
+  var gp = req.body.gpa;
+  var major = req.body.major;
+  var age = req.body.age;
+
+  console.log(req.body.name);
+  console.log(name);
+  console.log(req.body.weight);
+  console.log(weight);
+  console.log(req.body.height);
+  console.log(height);
+  console.log(req.body.hair_color);
+  console.log(hair);
+
+
   // const insertQuery = 'INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ($1,$2,$3,$4,$5,$6,$7)';
   var values = "('" + req.body.name + "','" + req.body.weight + "'," + req.body.height + "','" + req.body.hair_color + "','" + req.body.gpa + "','" + req.body.major + "','" + req.body.age + "')";
   pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values " + values);
