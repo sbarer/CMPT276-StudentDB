@@ -65,15 +65,15 @@
 .disbut:hover {background-color: rgb(37, 103, 165);}
 
 input[type="text"] {
-    text-indent: 00px ;
+    /* text-indent: 00px ; */
     text-align: center ;
-    width: auto;
+    width: 60px;
     border: 0;
     outline: none;
     background: transparent;
 }
 input[type="text1"] {
-    text-indent: 00px ;
+    /* text-indent: 00px ; */
     text-align: center ;
     width: auto;
     border: 0;
