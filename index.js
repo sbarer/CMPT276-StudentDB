@@ -25,12 +25,12 @@ express()
       const results = { 'results': (result) ? result.rows : null};
 
       const insertQuert = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
+      var values = [data.name, data.weight, data.height, data.hair_color, data.gpa, data.major, data.age];
       app.post('/contact', function(req, res){
-        pool.query(insertQuery)
+        pool.query(insertQuery, values);
       })
       // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
       // const data = {text: req.body.text};
-      // var values = [data.name, data.weight, data.height, data.hair_color, data.gpa, data.major, data.age];
 
       res.render('pages/db', results );
       client.release();

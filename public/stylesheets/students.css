@@ -81,9 +81,6 @@ input[type="text1"] {
     background: transparent;
 }
 
-.deleteRowButton {
-    /* width: 40px; */
-    /* background-color: rgb(102, 151, 207);
-    color: white;
-    border-radius: 8px ; */
+.form-field {
+    text-align: center;
 }
