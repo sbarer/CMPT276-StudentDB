@@ -33,19 +33,19 @@
             </tr>
         </thead>
         <tbody>
+          <% results.forEach(function(r) { %>
             <tr>
-                <% results.forEach(function(r) { %>
-                    <td><input type="checkbox" id="Check"/></td>
-                    <td><%= r.id %></td>
-                    <td><%= r.name %></td>
-                    <td><%= r.weight %></td>
-                    <td><%= r.height %></td>
-                    <td><%= r.hair_color %></td>
-                    <td><%= r.gpa %></td>
-                    <td><%= r.major %></td>
-                    <td><%= r.age %></td>
-                <% }); %>
-              </tr>
+              <td><input type="checkbox" id="Check"/></td>
+              <td><%= r.id %></td>
+              <td><%= r.name %></td>
+              <td><%= r.weight %></td>
+              <td><%= r.height %></td>
+              <td><%= r.hair_color %></td>
+              <td><%= r.gpa %></td>
+              <td><%= r.major %></td>
+              <td><%= r.age %></td>
+            </tr>
+          <% }); %>
         </tbody>
     </table>
     <br/>
