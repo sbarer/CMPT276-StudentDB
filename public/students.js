@@ -34,6 +34,10 @@ function editRowNum(selectObject) {
     alert("value inputted");
     var value = selectObject.value;
     var isnum = checknum(value);
+
+    if (isnum == false) {
+        selectObject.value = r.name;
+    }
 }
 
 function checknum(val) {
