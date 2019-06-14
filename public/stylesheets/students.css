@@ -83,4 +83,7 @@ input[type="text1"] {
 
 .deleteRow {
     width: auto;
+    background-color: rgb(102, 151, 207);
+    color: white;
+    border-radius: 8px ;
 }
