@@ -34,7 +34,7 @@ app.get('/db', async (req, res) => {
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
 
-  console.log("update Student set " + data + " where name ='" + req.body.multi + "';");
+  console.log("update Student set " + req.body"';");
 
   var name = req.body.name;
   var weight = req.body.weight;
