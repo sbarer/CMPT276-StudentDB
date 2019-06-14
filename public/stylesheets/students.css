@@ -72,7 +72,7 @@ input[type="text"] {
     outline: none;
     background: transparent;
 }
-input[name="major"] {
+input[type="text1"] {
     text-indent: 00px ;
     text-align: center ;
     width: auto;
