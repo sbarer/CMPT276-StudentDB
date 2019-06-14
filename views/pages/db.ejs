@@ -44,10 +44,10 @@
                     <%= r.id %>
                 </td>
                 <td>
-                    <input type="text" name="name" value=<%= r.name %>>
+                    <input type="text" name="name" value="<%= r.name %>"" onchange="editRow(this)>
                 </td>
                 <td>
-                    <input type="text" name="weight" value=<%= r.weight %>>
+                    <input type="text" name="weight" value="<%= r.weight %>" onchange="editRowNum(this)>
                 </td>
                 <td>
                     <input type="text" name="height" value=<%= r.height %>>
