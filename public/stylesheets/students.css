@@ -72,6 +72,14 @@ input[type="text"] {
     outline: none;
     background: transparent;
 }
+input[name="major"] {
+    text-indent: 00px ;
+    text-align: center ;
+    width: auto;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
 
 .deleteRow {
     width: auto;
