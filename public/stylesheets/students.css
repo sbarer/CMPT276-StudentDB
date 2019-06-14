@@ -27,6 +27,7 @@
   background-color: rgb(102, 151, 207);
   color: white;
   font-weight: lighter;
+  text-align: center;
 }
 .stats_table, th, td {
     border-radius: 3px ;
