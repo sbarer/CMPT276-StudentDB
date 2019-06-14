@@ -72,6 +72,9 @@ input[type="text"] {
     border: 0;
     outline: none;
     background: transparent;
+    font-family:Helvetica Neue; 
+    font-size: 18px;  
+
 }
 input[type="text1"] {
     /* text-indent: 00px ; */
@@ -80,6 +83,9 @@ input[type="text1"] {
     border: 0;
     outline: none;
     background: transparent;
+    font-family:Helvetica Neue; 
+    font-size: 18px;  
+
 }
 
 .form-field {
