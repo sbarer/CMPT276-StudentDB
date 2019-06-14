@@ -67,8 +67,12 @@
 input[type="text"] {
     text-indent: 00px ;
     text-align: center ;
-    width: 60px;
+    width: auto;
     border: 0;
     outline: none;
     background: transparent;
-  }
+}
+
+.deleterow {
+    width: auto;
+}
