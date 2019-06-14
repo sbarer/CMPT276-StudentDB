@@ -2,27 +2,19 @@
 <link rel="stylesheet" type="text/css" href="./stylesheets/students.css">
 <html>
 <head>
-  <% include ../partials/header.ejs %>
+  <!-- <% include ../partials/header.ejs %> -->
 </head>
 
 <body>
 
-<% include ../partials/nav.ejs %>
+<!-- <% include ../partials/nav.ejs %> -->
 
-<div class="container">
-<h2>Database Results</h2>
-
-<ul>
-    <% results.forEach(function(r) { %>
-        <li><%= r.id %> - <%= r.name %>  - <%= r.weight %>  - <%= r.height %> - <%= r.hair_color %> - <%= r.gpa %> - <%= r.major %> - <%= r.age %></li>
-    <% }); %>
-</ul>
 <div class="container" style="overflow-x:auto;">
     <table class="stats_table">
         <thead>
             <tr>
                 <th><input type="checkbox" id="Check All"/></th>
-                <th>ID Number</th> 
+                <th>ID</th> 
                 <th>Name</th> 
                 <th>Weight</th>
                 <th>Height</th>
@@ -49,8 +41,6 @@
         </tbody>
     </table>
     <br/>
-</div>
-
 </div>
 
 </body>
