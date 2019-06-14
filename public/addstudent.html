@@ -6,11 +6,13 @@
         <title> Simon Barer - A2 addStudent </title>
     </head>
     <body>   
+        <form method="post" action="/contact" novalidate></form>
         <div class="container">
             <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/db';">Cancel</button>
-            <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/db';">Add Student</button>
+            <button class="delbut" type="submit" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/db';">Add Student</button>
         </div>
-        <div class="container" style="overflow-x:auto;">
+    <br/>
+        <div class="form-field" style="overflow-x:auto;">
                 <table class="stats_table">
                     <thead>
                         <tr>
@@ -51,7 +53,5 @@
                 </table>
                 <br/>
             </div>
-
-
-
+        </form>
     </body>
