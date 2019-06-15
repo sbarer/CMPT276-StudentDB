@@ -33,7 +33,7 @@ app.get('/db', async (req, res) => {
   }
 });
 
-router.get('/display', function(req, res) {
+app.get('/display', function(req, res) {
   res.render('./public/displaystudent.ejs');
 });
 
