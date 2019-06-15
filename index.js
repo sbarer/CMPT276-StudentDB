@@ -34,7 +34,7 @@ app.get('/db', async (req, res) => {
 });
 
 app.get('/display', function(req, res) {
-  res.render('./public/displaystudent.ejs');
+  res.render('./public/displaystudent');
 });
 
 app.post('/insertStudent', function(req, res){
