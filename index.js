@@ -69,7 +69,7 @@ app.post('/updateStudent', function(req,res){
   pool.query("UPDATE student SET name = '" + name + "' where id = '" + req.body.id + "';"); 
   pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); 
   pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); 
-  pool.query("UPDATE student SET hair = '" + hair + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET hair_color = '" + hair + "' where id = '" + req.body.id + "';"); 
   pool.query("UPDATE student SET gpa = '" + gpa + "' where id = '" + req.body.id + "';"); 
   pool.query("UPDATE student SET major = '" + major + "' where id = '" + req.body.id + "';"); 
   pool.query("UPDATE student SET age = '" + age + "' where id = '" + req.body.id + "';"); 
