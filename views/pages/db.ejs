@@ -83,8 +83,9 @@
         <td style="vertical-align: text-bottom;">
         <% results.forEach(function(r) { %>
           <td style="vertical-align: text-bottom;">
-        <div style="vertical-align: text-bottom; padding: 5px; margin: 5px; border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *4 %>px;">
-          <h2 align="center" style="color: <%= r.hair_color %>; "> <%= r.name %> </h2>
+        <div style="border-radius: 4px; vertical-align: text-bottom; padding: 5px; margin: 5px; 
+        border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *4 %>px;">
+          <h2 align="center" style="color: <%= r.hair_color %>;"> <%= r.name %> </h2>
           <p style="size: 18px; text-align: center;"><%= r.gpa %></p>
           
         </div>
