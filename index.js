@@ -66,12 +66,15 @@ app.post('/updateStudent', function(req,res){
   var gpa = req.body.gpa;
   var major = req.body.major;
   var age = req.body.age;
-  pool.query("UPDATE student(name,weight,height,hair_color,gpa,major,age) values ('" + name + "','" + weight + "','" + height + "','" + hair + "','" + gpa + "','" + major + "','" + age + "') where id = " + req.body.id + ";");
+  pool.query("UPDATE student SET name = '" + name + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET hair = '" + hair + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET gpa = '" + gpa + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET major = '" + major + "' where id = '" + req.body.id + "';"); 
+  pool.query("UPDATE student SET age = '" + age + "' where id = '" + req.body.id + "';"); 
 
-
+  res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
-
-
-
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
