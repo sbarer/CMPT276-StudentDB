@@ -35,7 +35,7 @@ app.get('/db', async (req, res) => {
   // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
-
+  // split off input elements into their own variables
   var name = req.body.name;
   var weight = req.body.weight;
   var height = req.body.height;
@@ -44,21 +44,19 @@ app.post('/insertStudent', function(req, res){
   var major = req.body.major;
   var age = req.body.age;
 
-  console.log(req.body.name);
-  console.log(name);
-  console.log(req.body.weight);
-  console.log(weight);
-  console.log(req.body.height);
-  console.log(height);
-  console.log(req.body.hair_color);
-  console.log(hair);
+  // run all checks for invalid inputs
+  if(!checknum(weight) || weight < 0 || !checknum(height) || height < 0 || !checknum(gpa) || gpa > 4.3 || gpa < 0|| !checknum(age) || age < 0) {
+    res.redirect('https://simon-barer-a2.herokuapp.com/addStudent.html'); 
+  }
 
+  // add values into new database entry
   pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ('" + name + "','" + weight + "','" + height + "','" + hair + "','" + gpa + "','" + major + "','" + age + "')");
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
 app.post('/updateStudent', function(req,res){
   console.log(req.body);
+  // split off input elements into their own variables
   var name = req.body.name;
   var weight = req.body.weight;
   var height = req.body.height;
@@ -66,21 +64,25 @@ app.post('/updateStudent', function(req,res){
   var gpa = req.body.gpa;
   var major = req.body.major;
   var age = req.body.age;
+  // run all checks for invalid inputs, if valid, update database with new entries
   pool.query("UPDATE student SET name = '" + name + "' where id = '" + req.body.id + "';"); 
   if(checknum(weight)) {
     pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); }
-  pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); 
+  if(checknum(height)) {
+    pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); }
   pool.query("UPDATE student SET hair_color = '" + hair + "' where id = '" + req.body.id + "';"); 
-  pool.query("UPDATE student SET gpa = '" + gpa + "' where id = '" + req.body.id + "';"); 
+  if(checknum(gpa) || gpa > 4.3 || gpa < 0) {
+    pool.query("UPDATE student SET gpa = '" + gpa + "' where id = '" + req.body.id + "';"); }
   pool.query("UPDATE student SET major = '" + major + "' where id = '" + req.body.id + "';"); 
-  pool.query("UPDATE student SET age = '" + age + "' where id = '" + req.body.id + "';"); 
+  if(checknum(age)) {
+    pool.query("UPDATE student SET age = '" + age + "' where id = '" + req.body.id + "';"); }
 
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
 function checknum(val) {
   if (isNaN(val)) {
-      alert("Input was not a number.\nPlease try inputting a number only.");
+    window.alert("invalid entry");
       return false;
   } else {
       return true;
