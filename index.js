@@ -50,7 +50,7 @@ app.post('/insertStudent', function(req, res){
 
   // run all checks for invalid inputs
   if(!checknum(weight) || weight < 0 || !checknum(height) || height < 0 || !checknum(gpa) || gpa > 4.3 || gpa < 0|| !checknum(age) || age < 0) {
-    res.redirect('https://simon-barer-a2.herokuapp.com/addStudent.html'); 
+    res.redirect('https://simon-barer-a2.herokuapp.com/addstudent.html'); 
   }
 
   // add values into new database entry
