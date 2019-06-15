@@ -20,8 +20,6 @@
     font-family: Helvetica Neue; 
     font-size: 14px; 
 }
-.stats_table tr:nth-child(odd){background-color: rgb(215, 238, 247);}
-.stats_table tr:hover {background-color: lightblue;}
 .stats_table th {
   padding-top: 3px;
   padding-bottom: 3px;
@@ -29,7 +27,6 @@
   color: white;
   font-weight: bold;
   text-align: center;
-
 }
 .stats_table, th, td {
     border-radius: 3px ;
@@ -37,12 +34,14 @@
 .stats_table tr {
     padding-top: 2px;
     padding-bottom: 2px;
-
 }
 
-.buttonRow {
+.buttonCell {
     width: auto;
 }
+
+.stats_table tr:nth-child(odd){background-color: rgb(215, 238, 247);}
+.stats_table tr:hover {background-color: lightblue;}
 
 .delbut {
     background-color: rgb(102, 151, 207);
