@@ -7,7 +7,12 @@
   <title> Simon Barer - A2 - Display Students</title>
 </head>
 <body>
-
+    <% results.forEach(function(r) { %>
+        <div>
+            <font><%= r.name %></font>
+       
+        </div>
+    <% }); %>
 
 
 
