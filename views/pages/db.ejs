@@ -75,12 +75,15 @@
       </table>
       <br/>
   </div>
+
+
+  <% results.forEach(function(r) { %>
+    <div style="font-color:<%= r.hair_color %>">
+        <font> <%= r.name %> </font>
+   
+    </div>
+<% }); %>
+
 </body>
 </html>
 
-
-<% function display() {
-  var popup = document.getElementById("display");
-  popup.classList.toggle("show");
-} 
-%>
