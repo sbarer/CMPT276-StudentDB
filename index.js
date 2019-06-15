@@ -67,7 +67,7 @@ app.post('/updateStudent', function(req,res){
   var major = req.body.major;
   var age = req.body.age;
   pool.query("UPDATE student SET name = '" + name + "' where id = '" + req.body.id + "';"); 
-  if(checknum(val)) {
+  if(checknum(weight)) {
     pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); }
   pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); 
   pool.query("UPDATE student SET hair_color = '" + hair + "' where id = '" + req.body.id + "';"); 
