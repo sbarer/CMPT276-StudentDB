@@ -34,20 +34,20 @@
           </thead>
           <tbody>
             <% results.forEach(function(r) { %>
-              <!-- <form method="post" action="/updateStudent"> -->
+              <form class="studentTable" method="post" action="/updateStudent">
               <tr>
                 <td class="buttonCell">
                     <button class="deleteRowButton" id="deleteRowButton">Delete</button>
-                    <button class="deleteRowButton" id="updateRowButton" type="submit">Update</button>
+                    <input class="deleteRowButton" id="updateRowButton" type="submit" value="Update"></button>
                 </td>
                 <td>
                     <%= r.id %>
                 </td>
                 <td>
-                    <input type="text" name="name" value="<%= r.name %>" onchange="newRow(this)">
+                    <input type="text" name="name" value="<%= r.name %>">
                 </td>
                 <td>
-                    <input type="text" name="weight" value="<%= r.weight %>" onchange="editRowNum(this)">
+                    <input type="text" name="weight" value="<%= r.weight %>">
                 </td>
                 <td>
                     <input type="text" name="height" value=<%= r.height %>>
@@ -65,7 +65,7 @@
                     <input type="text" name="age" value=<%= r.age %>>
                 </td>
               </tr>
-            <!-- </form> -->
+            </form>
             <% }); %>
           </tbody>
       </table>
