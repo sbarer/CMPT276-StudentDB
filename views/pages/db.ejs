@@ -40,7 +40,7 @@
             <% results.forEach(function(r) { %>
             <form  class="studentTable" method="post" action="/updateStudent">
               <tr>
-                <form  class="studentTable" method="post" action="/deleteStudent">
+                <!-- <form  class="studentTable" method="post" action="/deleteStudent"> -->
                 <td class="buttonCell">
                     <input class="deleteRowButton" id="deleteRowButton" type="submit" value="Delete"></input>
                     <input class="deleteRowButton" id="updateRowButton" type="submit" value="Update"></input>
@@ -69,7 +69,7 @@
                 <td>
                     <input type="text" name="age" value=<%= r.age %>>
                 </td>
-              </form>
+              <!-- </form> -->
               </tr>
             </form>
             <% }); %>
