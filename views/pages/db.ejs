@@ -80,18 +80,18 @@
   
   <table>
     <tr>
-        <td style="width: 100%;">
-        <% results.forEach(function(r) { %>
         
-        <div style="padding: 5px; margin: 5px; border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *4 %>px;">
+        <% results.forEach(function(r) { %>
+          <td>
+        <div style="padding: 5px; margin: 5px; border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *3 %>px;">
           <h2 align="center" style="color: <%= r.hair_color %>; "> <%= r.name %> </h2>
           <p style="text-align: center;"><%= r.gpa %></p>
           
         </div>
         <br/>
-      
+      </td>
         <% }); %>
-      </td></tr>
+      </tr>
   </table>   
   
 </body>
