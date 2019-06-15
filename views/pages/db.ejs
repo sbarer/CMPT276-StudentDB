@@ -77,14 +77,15 @@
   </div>
   <br/><br/>
   
-  <div style="text-align: center;">
+  <div style="text-align: center; overflow-x:auto;">
   <table style="text-align: center; margin: auto;">
     <tr>
         <td style="vertical-align: text-bottom;">
         <% results.forEach(function(r) { %>
           <td style="vertical-align: text-bottom;">
         <div style="border-radius: 4px; vertical-align: text-bottom; padding: 5px; margin: 5px; 
-        border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *4 %>px;">
+        border: 2px solid lightblue; width:<%= r.weight%>px; min-width: 100px; background-color: rgb(<%= r.age % 255 %>, <%= r.age % 255 %>, <%= r.age % 255 %>);
+        height:<%= r.height *4 %>px; min-height: 80px">
           <h2 align="center" style="color: <%= r.hair_color %>;"> <%= r.name %> </h2>
           <p style="size: 18px; text-align: center;"><%= r.gpa %></p>
           
