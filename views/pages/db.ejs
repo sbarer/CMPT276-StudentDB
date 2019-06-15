@@ -33,6 +33,10 @@
               </tr>
           </thead>
           <tbody>
+              <script>
+                  var str = "hello testing";
+                  console.log(str);
+              </script>
             <% results.forEach(function(r) { %>
               <form class="studentTable" method="post" action="/updateStudent">
               <tr>
@@ -41,7 +45,7 @@
                     <input class="deleteRowButton" id="updateRowButton" type="submit" value="Update"></button>
                 </td>
                 <td>
-                    <%= r.id %>
+                    <input type="text" name="name" value="<%= r.id %> readonly">
                 </td>
                 <td>
                     <input type="text" name="name" value="<%= r.name %>">
