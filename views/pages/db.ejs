@@ -6,19 +6,17 @@
   <script type="text/javascript" src="students.js"></script>
   <title> Simon Barer - Assignment 2 </title>
 </head>
-
 <body>
     <div class="headline">   
         <text> Student Database </text><br/>
     </div> 
-<!-- <% include ../partials/nav.ejs %> -->
-<div class="container">
-    <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/addstudent.html';">Add New Student</button>
-    <!-- <button class="delbut" id="delsel">Delete Selected</button> -->
-    <!-- <button class="delbut" id="display">Edit Selected</button> -->
-    <button class="disbut" id="display" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/students.html';">Display Students</button>
-    <br/><br/>
-</div>
+  <div class="container">
+      <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/addstudent.html';">Add New Student</button>
+      <!-- <button class="delbut" id="delsel">Delete Selected</button> -->
+      <!-- <button class="delbut" type="submit" id="display">Update Students</button> -->
+      <button class="disbut" id="display" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/students.html';">Display Students</button>
+      <br/><br/>
+  </div>
   <div class="container" style="overflow-x:auto;">
       <table class="stats_table">
           <thead>
@@ -36,9 +34,11 @@
           </thead>
           <tbody>
             <% results.forEach(function(r) { %>
+              <form method="post" action="/updateStudent">
               <tr>
                 <td>
                     <button class="deleteRowButton" id="deleteRowButton">Delete</button>
+                    <button class="deleteRowButton" id="updateRowButton" type="submit">Update</button>
                   </td>
                 <td>
                     <%= r.id %>
@@ -65,6 +65,7 @@
                     <input type="text" name="age" value=<%= r.age %>>
                 </td>
               </tr>
+            </form>
             <% }); %>
           </tbody>
       </table>
