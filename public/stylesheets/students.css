@@ -40,6 +40,7 @@
     white-space: nowrap
 }
 
+.studentTable tr:nth-child(odd){background-color: rgb(225, 241, 248);}
 .stats_table tr:nth-child(odd){background-color: rgb(225, 241, 248);}
 .stats_table tr:hover {background-color: lightblue;}
 
