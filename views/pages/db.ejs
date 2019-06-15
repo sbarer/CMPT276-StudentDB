@@ -31,13 +31,15 @@
           </thead>
           <tbody>
               <script>
-                  var str = "hello testing";
+                  var str = "printing table element";
                   console.log(str);
               </script>
+            <!-- Iterate through database, printing out attribute values -->
             <% results.forEach(function(r) { %>
               <form class="studentTable" id="mainPage" method="post" action="/updateStudent">
               <!-- <form  class="studentTable" method="post" action="/deleteStudent"> -->
               <tr>
+                <!-- create buttons to allow for deletion or updating of row/attributes -->\
                 <td class="buttonCell">
                     <input formaction="/deleteStudent" class="deleteRowButton" id="deleteRowButton" type="submit" value="Delete"></input>
                     <input class="updateRowButton" id="updateRowButton" type="submit" value="Update"></input>
@@ -66,7 +68,6 @@
                 <td>
                     <input type="text" name="age" value=<%= r.age %>>
                 </td>
-              <!-- </form> -->
               </tr>
             </form>
             <% }); %>

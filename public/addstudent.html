@@ -13,12 +13,15 @@
         <div class="headline">   
             <text> Add Student </text><br/>
         </div> 
+        <!-- create form for addition of new student to database -->
         <form method="post" action="/insertStudent">
             <div class="container">
+                <!-- create buttons to allow for submission of new student, or to return back to homepage -->
                 <button class="delbut" type="button" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/db';">Cancel</button>
                 <input class="delbut" type="submit" id="delsel"></input>
             </div>
             <br/>
+            <!-- display contents of database -->
             <div class="form-field" style="overflow-x:auto;">
                     <table class="stats_table">
                         <thead>
