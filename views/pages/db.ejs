@@ -76,14 +76,14 @@
       <br/>
   </div>
 
-
+  <div>
   <% results.forEach(function(r) { %>
-    <div style="font-color:<%= r.hair_color %>">
-        <textarea> <%= r.name %> </textarea>
+    <table style="font-color: <%= r.hair_color %>; border: 2px solid lightblue;">
+        <p> <%= r.name %> </p>
    
-    </div>
-<% }); %>
-
+      </table>
+  <% }); %>
+  </div>
 </body>
 </html>
 
