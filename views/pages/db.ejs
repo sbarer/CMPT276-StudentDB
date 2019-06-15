@@ -78,8 +78,8 @@
 
   <div>
   <% results.forEach(function(r) { %>
-    <table style="font-color: <%= r.hair_color %>; border: 2px solid lightblue;">
-        <p> <%= r.name %> </p>
+    <table style="border: 2px solid lightblue;">
+        <p style="font-color: <%= r.hair_color %>""> <%= r.name %> </p>
    
       </table>
   <% }); %>
