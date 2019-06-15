@@ -12,7 +12,7 @@
     </div> 
   <div class="container">
       <button class="delbut" id="delsel" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/addstudent.html';">Add New Student</button>
-      <button type="submit" class="disbut" id="display" onclick="display()">Display Students</button>
+      <button type="submit" class="disbut" id="display" onclick="window.location.href = 'https://simon-barer-a2.herokuapp.com/db';">Update Display</button>
       <br/><br/>
   </div>
   <div class="container" style="overflow-x:auto;">
@@ -83,6 +83,9 @@
         <% results.forEach(function(r) { %>
         <td>
           <p style="font-color: <%= r.hair_color %>""> <%= r.name %> </p>
+          <br/>
+          <p> <%= r.gpa %> </p>
+
         </td>
         <% }); %>
       </tr>
