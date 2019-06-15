@@ -68,9 +68,10 @@ app.post('/updateStudent', function(req,res){
   pool.query("UPDATE student SET name = '" + name + "' where id = '" + req.body.id + "';"); 
   if(checknum(weight) && weight > 0) {
     pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); 
-  } else {
-    res.send("failure");
-  }
+  } 
+  // else {
+  //   res.send("failure");
+  // }
   if(checknum(height) && height > 0) {
     pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); }
   pool.query("UPDATE student SET hair_color = '" + hair + "' where id = '" + req.body.id + "';"); 
@@ -83,11 +84,11 @@ app.post('/updateStudent', function(req,res){
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
-app.post('/deleteStudent', function(req,res){
-  console.log("entered deleteStudent");
+// app.post('/deleteStudent', function(req,res){
+//   console.log("entered deleteStudent");
 
 
-});
+// });
 
 function checknum(val) {
   if (isNaN(val)) {
