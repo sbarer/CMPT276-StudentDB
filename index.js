@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-var popup = require('popups');
+var popup = require('popupS');
 
 const app = express();
 
