@@ -21,8 +21,8 @@
       <table class="stats_table">
           <thead>
               <tr>
-                  <!-- <th></th> -->
-                  <th>ID</th> 
+                  <th></th>
+                  <!-- <th>ID</th>  -->
                   <th>Name</th> 
                   <th>Weight</th>
                   <th>Height</th>
@@ -40,8 +40,9 @@
             <% results.forEach(function(r) { %>
             <form  class="studentTable" method="post" action="/updateStudent">
               <tr>
+                <form  class="studentTable" method="post" action="/deleteStudent">
                 <td class="buttonCell">
-                    <button class="deleteRowButton" id="deleteRowButton">Delete</button>
+                    <input class="deleteRowButton" id="deleteRowButton" type="submit" value="Delete"></input>
                     <input class="deleteRowButton" id="updateRowButton" type="submit" value="Update"></input>
                 </td>
                 <!-- <td>

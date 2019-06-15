@@ -80,6 +80,12 @@ app.post('/updateStudent', function(req,res){
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
+app.post('/deleteStudent', function(req,res){
+  console.log("entered deleteStudent");
+
+
+});
+
 function checknum(val) {
   if (isNaN(val)) {
       return false;
