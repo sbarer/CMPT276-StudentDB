@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+var popup = require('popups');
 
 const app = express();
 
@@ -82,6 +83,9 @@ app.post('/updateStudent', function(req,res){
 
 function checknum(val) {
   if (isNaN(val)) {
+    popup.alert({
+      content: "invalid value entered"
+    });
       return false;
   } else {
       return true;
