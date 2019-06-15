@@ -67,7 +67,10 @@ app.post('/updateStudent', function(req,res){
   // run all checks for invalid inputs, if valid, update database with new entries
   pool.query("UPDATE student SET name = '" + name + "' where id = '" + req.body.id + "';"); 
   if(checknum(weight) && weight > 0) {
-    pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); }
+    pool.query("UPDATE student SET weight = '" + weight + "' where id = '" + req.body.id + "';"); 
+  } else {
+    res.send("failure");
+  }
   if(checknum(height) && height > 0) {
     pool.query("UPDATE student SET height = '" + height + "' where id = '" + req.body.id + "';"); }
   pool.query("UPDATE student SET hair_color = '" + hair + "' where id = '" + req.body.id + "';"); 
