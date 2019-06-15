@@ -82,7 +82,6 @@ app.post('/updateStudent', function(req,res){
 
 function checknum(val) {
   if (isNaN(val)) {
-    window.alert("invalid entry");
       return false;
   } else {
       return true;
