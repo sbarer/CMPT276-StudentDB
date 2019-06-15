@@ -35,12 +35,6 @@ app.get('/db', async (req, res) => {
   // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
-  var str = "hello testing";
-  console.log(str);
-  for (var i =0; i < 5; i++) {
-    console.log(str);
-  }
-  // res.redirect("https://apple.com");
 
   var name = req.body.name;
   var weight = req.body.weight;
@@ -59,7 +53,7 @@ app.post('/insertStudent', function(req, res){
   console.log(req.body.hair_color);
   console.log(hair);
 
-  pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ('" + name + "'" + weight + "'" + height + "'" + hair + "'" + gpa + "'" + major + "'" + age + "'");
+  pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ('" + name + "'" + weight + "'" + height + "'" + hair + "'" + gpa + "'" + major + "'" + age + "')");
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
