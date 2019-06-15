@@ -89,8 +89,9 @@ app.post('/deleteStudent', function(req,res){
   console.log("entered deleteStudent");
   var id = req.body.id;
   console.log(id);
-  
+
   pool.query("DELETE from student where id = '" + id + "';");
+  res.redirect('https://simon-barer-a2.herokuapp.com/db');
 
 });
 
