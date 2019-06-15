@@ -22,7 +22,7 @@
           <thead>
               <tr>
                   <th></th>
-                  <!-- <th>ID</th>  -->
+                  <th style="display:none;">ID</th> 
                   <th>Name</th> 
                   <th>Weight</th>
                   <th>Height</th>
@@ -37,17 +37,17 @@
                   var str = "hello testing";
                   console.log(str);
               </script>
-            <form  class="studentTable" method="post" action="/updateStudent">
             <% results.forEach(function(r) { %>
+              <form  class="studentTable" method="post" action="/updateStudent">
               <tr>
                 <!-- <form  class="studentTable" method="post" action="/deleteStudent"> -->
                 <td class="buttonCell">
                     <!-- <input class="deleteRowButton" id="deleteRowButton" type="submit" value="Delete"></input> -->
                     <input class="updateRowButton" id="updateRowButton" type="submit" value="Update"></input>
                 </td>
-                <!-- <td>
+                <td style="display:none;">
                     <input type="text" name="id" value="<%= r.id %>" readonly>
-                </td> -->
+                </td>
                 <td>
                     <input type="text" name="name" value="<%= r.name %>">
                 </td>
