@@ -37,11 +37,11 @@
 }
 
 .buttonCell {
-    width: auto;
+    width: 100%;
     white-space: nowrap
 }
 
-.stats_table tr:nth-child(odd){background-color: rgb(215, 238, 247);}
+.stats_table tr:nth-child(odd){background-color: rgb(225, 241, 248);}
 .stats_table tr:hover {background-color: lightblue;}
 
 .delbut {
