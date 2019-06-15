@@ -52,10 +52,10 @@ app.post('/insertStudent', function(req, res){
   if(!checknum(weight) || weight < 0 || !checknum(height) || height < 0 || !checknum(gpa) || gpa > 4.3 || gpa < 0|| !checknum(age) || age < 0) {
     res.redirect('https://simon-barer-a2.herokuapp.com/addstudent.html'); 
   }
-
+  else {
   // add values into new database entry
   pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ('" + name + "','" + weight + "','" + height + "','" + hair + "','" + gpa + "','" + major + "','" + age + "')");
-  res.redirect('https://simon-barer-a2.herokuapp.com/db');
+  res.redirect('https://simon-barer-a2.herokuapp.com/db'); }
 });
 
 app.post('/updateStudent', function(req,res){
