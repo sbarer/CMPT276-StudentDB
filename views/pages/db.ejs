@@ -79,16 +79,18 @@
   
   
   <table>
-    <tr><td>
+    <tr>
         <% results.forEach(function(r) { %>
+        <td>
         <div style="padding: 50px;margin: 20px; border: 2px solid lightblue; width: '<%= r.weight %>'px; height: '<%= r.height %>'px;">
           <h2 style="color: '<%= r.hair_color %>'"> <%= r.name %> </h2>
           <p> <%= r.gpa %> </p>
           
         </div>
         <br/>
+      </td>
         <% }); %>
-    </td></tr>
+    </tr>
   </table>   
   
 </body>
