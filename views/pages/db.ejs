@@ -80,10 +80,10 @@
   <div style="text-align: center;">
   <table style="text-align: center; margin: auto;">
     <tr>
-        <td>
+        <td style="vertical-align: baseline;">
         <% results.forEach(function(r) { %>
-          <td>
-        <div style="padding: 5px; margin: 5px; border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *4 %>px;">
+          <td style="vertical-align: baseline;">
+        <div style="vertical-align: baseline; padding: 5px; margin: 5px; border: 2px solid lightblue; width:<%= r.weight%>px; height:<%= r.height *4 %>px;">
           <h2 align="center" style="color: <%= r.hair_color %>; "> <%= r.name %> </h2>
           <p style="size: 18px; text-align: center;"><%= r.gpa %></p>
           
