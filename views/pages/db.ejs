@@ -75,22 +75,20 @@
       </table>
       <br/>
   </div>
-
-  <div>
+  <br/><br/>
   
-    <table style="border: 2px solid lightblue;">
-      <tr>
+  
+  
         <% results.forEach(function(r) { %>
-        <td>
-          <p style="font-color: <%= r.hair_color %>""> <%= r.name %> </p>
+        <div>
+          <h2 style="font-color: <%= r.hair_color %>""> <%= r.name %> </h2>
           <br/>
           <p> <%= r.gpa %> </p>
 
-        </td>
+        </div>
         <% }); %>
-      </tr>
-    </table>
-  </div>
+      
+  
 </body>
 </html>
 
