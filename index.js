@@ -59,10 +59,7 @@ app.post('/insertStudent', function(req, res){
   console.log(req.body.hair_color);
   console.log(hair);
 
-
-  // const insertQuery = 'INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ($1,$2,$3,$4,$5,$6,$7)';
-  var values = "('" + req.body.name + "','" + req.body.weight + "'," + req.body.height + "','" + req.body.hair_color + "','" + req.body.gpa + "','" + req.body.major + "','" + req.body.age + "')";
-  pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values " + values);
+  pool.query("INSERT INTO student(name,weight,height,hair_color,gpa,major,age) values ('" + name + "'" + weight + "'" + height + "'" + hair + "'" + gpa + "'" + major + "'" + age + "'");
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
