@@ -21,7 +21,7 @@
       <table class="stats_table">
           <thead>
               <tr>
-                  <th></th>
+                  <!-- <th></th> -->
                   <th>ID</th> 
                   <th>Name</th> 
                   <th>Weight</th>
@@ -44,9 +44,9 @@
                     <button class="deleteRowButton" id="deleteRowButton">Delete</button>
                     <input class="deleteRowButton" id="updateRowButton" type="submit" value="Update"></input>
                 </td>
-                <td>
+                <!-- <td>
                     <input type="text" name="id" value="<%= r.id %>" readonly>
-                </td>
+                </td> -->
                 <td>
                     <input type="text" name="name" value="<%= r.name %>">
                 </td>
@@ -57,7 +57,7 @@
                     <input type="text" name="height" value=<%= r.height %>>
                 </td>
                 <td>
-                    <input type="text" name="hair_color" value=<%= r.hair_color %>>
+                    <input type="color" name="hair_color" value=<%= r.hair_color %>>
                 </td>
                 <td>
                     <input type="text" name="gpa" value=<%= r.gpa %>>
