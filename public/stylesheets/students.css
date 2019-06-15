@@ -13,7 +13,7 @@
 
 .stats_table {
     width: 800px ;
-    border: 1px solid lightblue;
+    border: 2px solid lightblue;
     border-radius: 4px ;
     margin: auto;
     text-align: center;
@@ -80,7 +80,7 @@ input[type="text"] {
 input[type="text1"] {
     /* text-indent: 00px ; */
     text-align: center ;
-    width: 70px;
+    width: 75px;
     border: 0;
     outline: none;
     background: transparent;
