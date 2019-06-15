@@ -80,9 +80,12 @@
   
   
         <% results.forEach(function(r) { %>
-        <div style="border: 2px solid lightblue;">
+        <div style="border: 2px solid lightblue; width: '<%= r.weight %>'; height: '<%= r.height %>';
+        
+        
+        
+        ">
           <h2 style="color: '<%= r.hair_color %>'"> <%= r.name %> </h2>
-          <br/>
           <p> <%= r.gpa %> </p>
 
         </div>
