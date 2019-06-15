@@ -32,7 +32,11 @@ app.get('/db', async (req, res) => {
     res.send("Error " + err);
   }
 });
-  // const text = 'INSERT INTO items(name,weight,height,hair_color,gpa,major,age) values($1, $2,$3,$4,$5,$6,$7)';
+
+router.get('/display', function(req, res) {
+  res.render('./public/displaystudent.ejs');
+});
+
 app.post('/insertStudent', function(req, res){
   console.log(req.body);
   // split off input elements into their own variables
@@ -102,6 +106,5 @@ function checknum(val) {
       return true;
   }
 }
-
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

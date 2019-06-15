@@ -8,8 +8,8 @@
 </head>
 <body>
     <% results.forEach(function(r) { %>
-        <div>
-            <font font-color=<%= r.hair_color %>><%= r.name %></font>
+        <div style="font-color:<%= r.hair_color %>">
+            <font> <%= r.name %> </font>
        
         </div>
     <% }); %>
