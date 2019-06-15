@@ -38,11 +38,11 @@
                   console.log(str);
               </script>
             <% results.forEach(function(r) { %>
-              <form  class="studentTable" method="post" action="/updateStudent">
+              <form class="studentTable" id="mainPage" method="post" action="/updateStudent">
               <!-- <form  class="studentTable" method="post" action="/deleteStudent"> -->
               <tr>
                 <td class="buttonCell">
-                    <input class="deleteRowButton" id="deleteRowButton" type="submit" value="Delete"></input>
+                    <input formaction="/deleteStudent" class="deleteRowButton" id="deleteRowButton" type="submit" value="Delete"></input>
                     <input class="updateRowButton" id="updateRowButton" type="submit" value="Update"></input>
                 </td>
                 <td style="display:none;">

@@ -56,6 +56,7 @@ app.post('/insertStudent', function(req, res){
 
 app.post('/updateStudent', function(req,res){
   console.log(req.body);
+
   // split off input elements into their own variables
   var name = req.body.name;
   var weight = req.body.weight;
@@ -84,11 +85,13 @@ app.post('/updateStudent', function(req,res){
   res.redirect('https://simon-barer-a2.herokuapp.com/db');
 });
 
-// app.post('/deleteStudent', function(req,res){
-//   console.log("entered deleteStudent");
+app.post('/deleteStudent', function(req,res){
+  console.log("entered deleteStudent");
+  var id = req.body.id;
 
+  pool.query("DELETE from student where id = '" + id + "';");
 
-// });
+});
 
 function checknum(val) {
   if (isNaN(val)) {
