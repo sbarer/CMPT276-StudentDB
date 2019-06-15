@@ -20,7 +20,7 @@
     font-family: Helvetica Neue; 
     font-size: 14px; 
 }
-.stats_table tr:nth-child(odd){background-color: rgb(228, 242, 247);}
+.stats_table tr:nth-child(odd){background-color: rgb(215, 238, 247);}
 .stats_table tr:hover {background-color: lightblue;}
 .stats_table th {
   padding-top: 3px;
@@ -38,6 +38,10 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
+}
+
+.buttonRow {
+    width: auto;
 }
 
 .delbut {
